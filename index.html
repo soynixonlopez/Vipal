@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vipal S.A. - Instalaciones profesionales de vidrio y aluminio. Ventanas, puertas, fachadas, barandas y más. Calidad y diseño.">
+  <title>Vipal S.A. | Vidrio y Aluminio - Instalaciones Profesionales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo/favicon.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navegación -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">
+        <img src="assets/logo/favicon.jpeg" alt="" class="logo-icon" width="40" height="40">
+        <span class="logo-text">VIPAL</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#quienes-somos">Quiénes somos</a></li>
+          <li><a href="#por-que-elegirnos">Por qué elegirnos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li class="nav-item-cta"><button type="button" class="btn btn-primary btn-nav" id="openPresupuestoModal" aria-haspopup="dialog" aria-expanded="false">Solicitar presupuesto</button></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-label">Instalaciones profesionales</p>
+          <h1 class="hero-title">
+            <span class="hero-title-accent">Vidrio y Aluminio</span><br>
+            para tu hogar y negocio
+          </h1>
+          <p class="hero-desc">
+            Ventanas, puertas, fachadas de vidrio templado, barandas, louvers y más. Calidad, seguridad y diseño con años de experiencia.
+          </p>
+          <div class="hero-cta">
+            <button type="button" class="btn btn-primary btn-lg" id="openPresupuestoHero">Solicitar presupuesto</button>
+            <a href="#servicios" class="btn btn-outline btn-lg">Ver servicios</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="15">0</span>
+              <span class="stat-label">Años de experiencia</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="500">0</span>
+              <span class="stat-label">Proyectos completados</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="98">0</span>
+              <span class="stat-label">% Clientes satisfechos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="24">0</span>
+              <span class="stat-label">Meses de garantía</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-img-wrap">
+            <img src="assets/img/vis2.jpeg" alt="Instalaciones de vidrio y aluminio - Vipal" class="hero-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiénes somos -->
+    <section class="section section-light" id="quienes-somos">
+      <div class="container">
+        <p class="section-label">Quiénes somos</p>
+        <h2 class="section-title">Expertos en instalaciones de vidrio y aluminio</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              En <strong>Vipal S.A.</strong> nos especializamos en la fabricación e instalación de todo tipo de soluciones en vidrio y aluminio para hogares, comercios e industrias. Nuestra trayectoria nos avala como referentes en calidad, diseño y cumplimiento de plazos.
+            </p>
+            <p>
+              Trabajamos con materiales de primera calidad y un equipo técnico capacitado para ofrecer ventanas, puertas, fachadas, barandas, louvers y acabados que combinan estética, seguridad y durabilidad.
+            </p>
+            <ul class="about-list">
+              <li>Personal calificado y certificado</li>
+              <li>Materiales de primera calidad</li>
+              <li>Presupuestos sin compromiso</li>
+            </ul>
+          </div>
+          <div class="about-visual">
+            <div class="about-card">
+              <span class="about-card-num">15+</span>
+              <span class="about-card-text">Años en el mercado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="section section-light" id="por-que-elegirnos">
+      <div class="container">
+        <p class="section-label">Ventajas</p>
+        <h2 class="section-title">¿Por qué elegirnos?</h2>
+        <p class="section-subtitle">Razones por las que cientos de clientes confían en nosotros para sus proyectos.</p>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3>Calidad garantizada</h3>
+            <p>Materiales certificados y mano de obra con garantía en todos nuestros trabajos.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3>Entrega a tiempo</h3>
+            <p>Cumplimos plazos acordados para que tu proyecto avance sin retrasos.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3>Atención personalizada</h3>
+            <p>Asesoramiento técnico y presupuestos a medida según tu necesidad.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+            </div>
+            <h3>Diseño a medida</h3>
+            <p>Soluciones adaptadas a tu espacio, estilo y presupuesto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section section-dark" id="servicios">
+      <div class="container">
+        <p class="section-label">Qué hacemos</p>
+        <h2 class="section-title">Nuestros servicios</h2>
+        <p class="section-subtitle">Instalaciones profesionales en vidrio y aluminio para todo tipo de proyectos.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card-bg"></div>
+            <div class="service-card-content">
+              <span class="service-category">Ventanas de aluminio</span>
+              <h3>Ventanas de aluminio y vidrio</h3>
+              <p>Ventanas de línea europea y estándar, con vidrio simple o DVH para mayor aislamiento térmico y acústico.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card-bg"></div>
+            <div class="service-card-content">
+              <span class="service-category">Puertas de aluminio</span>
+              <h3>Puertas de aluminio y vidrio</h3>
+              <p>Puertas corredizas, batientes y pivotantes en aluminio con vidrio, para interiores y exteriores.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card-bg"></div>
+            <div class="service-card-content">
+              <span class="service-category">Baños</span>
+              <h3>Piedras y mamparas de baño</h3>
+              <p>Mamparas de vidrio templado, piedras de baño y divisiones que combinan higiene y diseño.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card-bg"></div>
+            <div class="service-card-content">
+              <span class="service-category">Fachadas</span>
+              <h3>Fachadas de vidrio templado</h3>
+              <p>Cerramientos y cortinas de vidrio para fachadas, balcones y locales con máxima luminosidad.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card-bg"></div>
+            <div class="service-card-content">
+              <span class="service-category">Barandas</span>
+              <h3>Barandas de vidrio y metal</h3>
+              <p>Barandas en vidrio templado con estructura de aluminio o acero inoxidable para escaleras y balcones.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card-bg"></div>
+            <div class="service-card-content">
+              <span class="service-category">Louvers</span>
+              <h3>Louvers y celosías</h3>
+              <p>Sistemas de louvers en aluminio para ventilación, privacidad y control solar en edificios.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section section-light" id="testimonios">
+      <div class="container">
+        <p class="section-label">Opiniones</p>
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <p class="section-subtitle">Experiencias reales de quienes confiaron en nosotros.</p>
+        <div class="testimonials-slider">
+          <div class="testimonials-track">
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Excelente trabajo con las ventanas de toda la casa. Puntuales, limpios y el resultado impecable. Los recomiendo."</p>
+              <div class="testimonial-author">
+                <span class="testimonial-avatar">MC</span>
+                <div>
+                  <strong>María C.</strong>
+                  <span>Particular</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Instalaron la fachada de vidrio del local. Muy profesionales y el presupuesto fue claro desde el inicio."</p>
+              <div class="testimonial-author">
+                <span class="testimonial-avatar">JL</span>
+                <div>
+                  <strong>Juan L.</strong>
+                  <span>Comercio</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Las barandas de vidrio quedaron perfectas. Calidad y diseño tal como lo habíamos acordado."</p>
+              <div class="testimonial-author">
+                <span class="testimonial-avatar">AR</span>
+                <div>
+                  <strong>Ana R.</strong>
+                  <span>Particular</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section section-light section-contact" id="contacto">
+      <div class="container">
+        <header class="contact-header">
+          <p class="section-label">Contacto</p>
+          <h2 class="section-title">Contacto institucional</h2>
+          <p class="section-subtitle">Estamos a su disposición para consultas, presupuestos y coordinación de visitas técnicas. Respondemos en un plazo de 24 a 48 horas hábiles.</p>
+        </header>
+        <div class="contact-grid">
+          <div class="contact-data">
+            <div class="contact-block">
+              <h3 class="contact-block-title">Datos de contacto</h3>
+              <dl class="contact-dl">
+                <div class="contact-dl-item">
+                  <dt>Teléfono</dt>
+                  <dd><a href="tel:+5491112345678">(+54) 11 1234-5678</a></dd>
+                </div>
+                <div class="contact-dl-item">
+                  <dt>Correo electrónico</dt>
+                  <dd><a href="mailto:contacto@vipal.com">contacto@vipal.com</a></dd>
+                </div>
+                <div class="contact-dl-item">
+                  <dt>Dirección</dt>
+                  <dd>Av. Ejemplo 1234, Buenos Aires, Argentina</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contact-block">
+              <h3 class="contact-block-title">Horario de atención</h3>
+              <p class="contact-schedule">Lunes a Viernes: 8:00 a 18:00 hs.<br>Sábados: 8:00 a 13:00 hs.</p>
+            </div>
+            <a href="https://wa.me/5491112345678" class="btn btn-whatsapp" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+          <div class="contact-form-wrapper">
+            <h3 class="contact-form-title">Formulario de consulta</h3>
+            <form class="contact-form" id="contactForm">
+              <label for="name">Nombre completo</label>
+              <input type="text" id="name" name="name" required placeholder="Ingrese su nombre completo">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="3" required placeholder="Describa su consulta o proyecto..."></textarea>
+              <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+      <div class="container">
+        <div class="newsletter-inner">
+          <div class="newsletter-content">
+            <p class="newsletter-label">Newsletter</p>
+            <h2 class="newsletter-title">Mantente informado</h2>
+            <p class="newsletter-desc">Recibí novedades, ofertas y consejos sobre vidrio y aluminio en tu correo. Sin spam, podés darte de baja cuando quieras.</p>
+          </div>
+          <div class="newsletter-form-wrap">
+            <form class="newsletter-form" id="newsletterForm" aria-label="Suscribirse">
+              <input type="email" name="email" placeholder="Tu correo electrónico" required>
+              <button type="submit" class="btn btn-primary">Suscribirme</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">
+            <img src="assets/logo/favicon.jpeg" alt="" class="logo-icon" width="40" height="40">
+            <span class="logo-text">VIPAL</span>
+          </a>
+          <p>Instalaciones profesionales de vidrio y aluminio. Calidad y experiencia desde hace más de 15 años.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Ventanas y puertas</a></li>
+            <li><a href="#servicios">Fachadas de vidrio</a></li>
+            <li><a href="#servicios">Barandas y louvers</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <a href="mailto:contacto@vipal.com">contacto@vipal.com</a>
+          <a href="tel:+5491112345678">(+54) 11 1234-5678</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Vipal S.A. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Presupuesto -->
+  <div class="modal-overlay" id="presupuestoModal" role="dialog" aria-modal="true" aria-labelledby="modalPresupuestoTitle" aria-hidden="true">
+    <div class="modal" id="modalPresupuestoDialog">
+      <div class="modal-header">
+        <div class="modal-header-accent"></div>
+        <button type="button" class="modal-close" id="closePresupuestoModal" aria-label="Cerrar modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="modal-header-content">
+          <span class="modal-label">Cotización</span>
+          <h2 id="modalPresupuestoTitle" class="modal-title">Solicitar presupuesto</h2>
+          <p class="modal-desc">Completá el formulario y te respondemos en 24 a 48 horas con un presupuesto sin compromiso.</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="presupuestoForm">
+          <div class="modal-form-row">
+            <div class="modal-form-group">
+              <label for="presupuesto-nombre">Nombre</label>
+              <input type="text" id="presupuesto-nombre" name="nombre" required placeholder="Tu nombre completo">
+            </div>
+            <div class="modal-form-group">
+              <label for="presupuesto-email">Correo</label>
+              <input type="email" id="presupuesto-email" name="email" required placeholder="tu@correo.com">
+            </div>
+          </div>
+          <div class="modal-form-row">
+            <div class="modal-form-group">
+              <label for="presupuesto-telefono">Teléfono</label>
+              <input type="tel" id="presupuesto-telefono" name="telefono" required placeholder="(11) 1234-5678">
+            </div>
+            <div class="modal-form-group">
+              <label for="presupuesto-servicio">Servicio</label>
+              <select id="presupuesto-servicio" name="servicio">
+                <option value="">Elegir servicio...</option>
+                <option value="ventanas">Ventanas de aluminio</option>
+                <option value="puertas">Puertas de aluminio</option>
+                <option value="mamparas">Mamparas / Baño</option>
+                <option value="fachadas">Fachadas de vidrio</option>
+                <option value="barandas">Barandas</option>
+                <option value="louvers">Louvers y celosías</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-form-group">
+            <label for="presupuesto-mensaje">¿Qué necesitás?</label>
+            <textarea id="presupuesto-mensaje" name="mensaje" rows="3" required placeholder="Contanos brevemente tu proyecto o consulta..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block modal-submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón WhatsApp fijo -->
+  <a href="https://wa.me/5491112345678" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
