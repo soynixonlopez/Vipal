@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useMemo } from "react";
 import { ThemeMode } from "@/types";
 
 interface ThemeContextValue {
@@ -10,30 +10,13 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
-function resolveInitialTheme(): ThemeMode {
-  if (typeof window === "undefined") return "light";
-  const savedTheme = window.localStorage.getItem("vipal-theme");
-  if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-}
-
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<ThemeMode>(() => resolveInitialTheme());
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    window.localStorage.setItem("vipal-theme", theme);
-  }, [theme]);
-
   const value = useMemo(
     () => ({
-      theme,
-      toggleTheme: () =>
-        setTheme((current) => (current === "light" ? "dark" : "light")),
+      theme: "light" as ThemeMode,
+      toggleTheme: () => {},
     }),
-    [theme],
+    [],
   );
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

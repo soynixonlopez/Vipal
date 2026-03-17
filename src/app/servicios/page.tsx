@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ServiceGrid } from "@/components/services/ServiceGrid";
+import { ServicesExplorer } from "@/components/services/ServicesExplorer";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { services } from "@/data/services";
 import { CTASection } from "@/components/shared/CTASection";
@@ -22,7 +22,7 @@ export default function ServiciosPage() {
           description="Cada servicio se desarrolla con enfoque tecnico, diseño elegante y ejecucion profesional para garantizar resultados duraderos."
         />
         <div className="mt-10">
-          <ServiceGrid items={services} />
+          <ServicesExplorer items={services} />
         </div>
       </section>
 

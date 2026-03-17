@@ -18,6 +18,7 @@ export interface Service {
   applications: string[];
   whyChoose: string[];
   image: string;
+  gallery?: string[];
   featured?: boolean;
   category: "vidrio" | "aluminio" | "oficinas" | "decorativo";
 }

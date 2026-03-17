@@ -47,13 +47,13 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
     <>
       <section className="container-custom grid gap-10 py-16 lg:grid-cols-2">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">
+          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
             Servicio especializado
           </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             {service.name}
           </h1>
-          <p className="mt-5 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="mt-5 text-base leading-relaxed text-slate-600">
             {service.fullDescription}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -62,43 +62,75 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               href={`https://wa.me/${company.whatsapp}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-cyan-500 hover:text-cyan-700 dark:border-slate-700 dark:text-slate-100 dark:hover:border-cyan-400 dark:hover:text-cyan-300"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-emerald-500 hover:text-emerald-700"
             >
               Contactar por WhatsApp
             </a>
           </div>
         </div>
-        <div className="relative h-80 overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 dark:border-slate-800 dark:bg-slate-900">
-          <Image src={service.image} alt={service.name} fill className="object-cover" />
+        <div className="relative h-80 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
+          <Image
+            src={service.image}
+            alt={service.name}
+            fill
+            quality={100}
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover"
+          />
         </div>
       </section>
 
+      {service.gallery && service.gallery.length > 1 && (
+        <section className="container-custom pb-16">
+          <h2 className="text-xl font-semibold text-slate-900 mb-4">
+            Galería del servicio
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {service.gallery.map((src) => (
+              <div
+                key={src}
+                className="relative h-52 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+              >
+                <Image
+                  src={src}
+                  alt={service.name}
+                  fill
+                  quality={100}
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="container-custom grid gap-6 pb-20 md:grid-cols-3">
-        <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+        <article className="rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-xl font-semibold text-slate-900">
             Beneficios
           </h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="mt-4 space-y-2 text-sm text-slate-600">
             {service.benefits.map((benefit) => (
               <li key={benefit}>• {benefit}</li>
             ))}
           </ul>
         </article>
-        <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+        <article className="rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-xl font-semibold text-slate-900">
             Usos comunes
           </h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="mt-4 space-y-2 text-sm text-slate-600">
             {service.applications.map((application) => (
               <li key={application}>• {application}</li>
             ))}
           </ul>
         </article>
-        <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+        <article className="rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-xl font-semibold text-slate-900">
             Por que elegir este servicio
           </h2>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="mt-4 space-y-2 text-sm text-slate-600">
             {service.whyChoose.map((reason) => (
               <li key={reason}>• {reason}</li>
             ))}
@@ -107,7 +139,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
       </section>
 
       <section className="container-custom pb-20">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+        <h2 className="text-2xl font-bold text-slate-900">
           Servicios relacionados
         </h2>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
@@ -115,7 +147,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             <Link
               key={item.slug}
               href={`/servicios/${item.slug}`}
-              className="rounded-2xl border border-slate-200 bg-white p-5 text-sm font-semibold text-slate-800 transition hover:border-cyan-500 hover:text-cyan-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-cyan-400 dark:hover:text-cyan-300"
+              className="rounded-2xl border border-slate-200 bg-white p-5 text-sm font-semibold text-slate-800 transition hover:border-emerald-500 hover:text-emerald-700"
             >
               {item.name}
             </Link>

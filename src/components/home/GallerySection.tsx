@@ -16,7 +16,7 @@ export function GallerySection() {
         {projects.slice(0, 3).map((project) => (
           <article
             key={project.id}
-            className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
           >
             <div className="relative h-48">
               <Image
@@ -27,13 +27,13 @@ export function GallerySection() {
               />
             </div>
             <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">
+              <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
                 {project.category}
               </p>
-              <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-white">
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">
                 {project.title}
               </h3>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-2 text-sm text-slate-600">
                 {project.description}
               </p>
             </div>
@@ -44,7 +44,7 @@ export function GallerySection() {
       <div className="mt-8">
         <Link
           href="/proyectos"
-          className="text-sm font-semibold text-cyan-700 hover:text-cyan-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+          className="text-sm font-semibold text-emerald-700 hover:text-emerald-600"
         >
           Ver galería completa →
         </Link>

@@ -15,12 +15,12 @@ export function CTASection({ title, description }: CtaSectionProps) {
         </h2>
         <p className="mt-4 max-w-2xl text-slate-100/90">{description}</p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <ButtonLink
+          <a
             href="/contacto"
-            className="bg-white text-slate-900 hover:bg-slate-100"
+            className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-emerald-600/20 transition hover:bg-slate-100"
           >
             Solicitar cotización ahora
-          </ButtonLink>
+          </a>
           <a
             href={`https://wa.me/${company.whatsapp}`}
             target="_blank"

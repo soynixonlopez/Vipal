@@ -11,13 +11,13 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/80">
+    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
       <div className="container-custom flex h-20 items-center justify-between">
         <Link href="/" className="group">
-          <p className="text-xl font-bold text-slate-900 dark:text-white">
+          <p className="text-xl font-bold text-slate-900">
             {company.name}
           </p>
-          <p className="text-xs uppercase tracking-widest text-cyan-700 dark:text-cyan-300">
+          <p className="text-xs uppercase tracking-widest text-emerald-700">
             {company.slogan}
           </p>
         </Link>
@@ -27,7 +27,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slate-700 transition hover:text-cyan-700 dark:text-slate-200 dark:hover:text-cyan-300"
+              className="text-sm font-medium text-slate-700 transition hover:text-emerald-700"
             >
               {link.label}
             </Link>
@@ -44,7 +44,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-700 dark:border-slate-700 dark:text-slate-100"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-700"
             aria-label="Abrir menú"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -53,13 +53,13 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-slate-200 bg-white px-6 py-5 dark:border-slate-800 dark:bg-slate-950 md:hidden">
+        <div className="border-t border-slate-200 bg-white px-6 py-5 md:hidden">
           <nav className="grid gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-700 dark:text-slate-200"
+                className="text-sm font-medium text-slate-700"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

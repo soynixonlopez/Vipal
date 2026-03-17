@@ -41,13 +41,13 @@ export function WhyChooseUsSection() {
         {pillars.map((pillar) => (
           <article
             key={pillar.title}
-            className="rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+            className="rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md"
           >
-            <pillar.icon className="h-8 w-8 text-cyan-600 dark:text-cyan-300" />
-            <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">
+            <pillar.icon className="h-8 w-8 text-cyan-700" />
+            <h3 className="mt-4 text-lg font-semibold text-slate-950">
               {pillar.title}
             </h3>
-            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            <p className="mt-2 text-sm text-slate-700">
               {pillar.description}
             </p>
           </article>

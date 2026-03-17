@@ -33,8 +33,8 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
             className={cn(
               "rounded-full border px-4 py-2 text-sm font-medium transition",
               activeCategory === category
-                ? "border-cyan-500 bg-cyan-500 text-white"
-                : "border-slate-300 bg-white text-slate-700 hover:border-cyan-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200",
+                ? "border-cyan-600 bg-cyan-600 text-white"
+                : "border-slate-300 bg-white text-slate-700 hover:border-cyan-600",
             )}
             onClick={() => setActiveCategory(category)}
           >
@@ -48,7 +48,7 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
           <button
             type="button"
             key={project.id}
-            className="group overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+            className="group overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
             onClick={() => setSelected(project)}
           >
             <div className="relative h-48">
@@ -56,17 +56,19 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
                 src={project.image}
                 alt={project.title}
                 fill
+                quality={100}
+                sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
                 className="object-cover transition duration-500 group-hover:scale-105"
               />
             </div>
             <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">
+              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-800">
                 {project.category}
               </p>
-              <h3 className="mt-2 text-lg font-semibold text-slate-900 dark:text-white">
+              <h3 className="mt-2 text-lg font-semibold text-slate-950">
                 {project.title}
               </h3>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-2 text-sm text-slate-700">
                 {project.description}
               </p>
             </div>
@@ -76,7 +78,7 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
 
       {selected && (
         <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/70 p-4">
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+          <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-slate-200 bg-white">
             <button
               type="button"
               className="absolute right-4 top-4 z-10 rounded-full border border-slate-300 bg-white/90 p-2 dark:border-slate-700 dark:bg-slate-900/90"
@@ -86,16 +88,23 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
               <X className="h-4 w-4" />
             </button>
             <div className="relative h-72 w-full">
-              <Image src={selected.image} alt={selected.title} fill className="object-cover" />
+              <Image
+                src={selected.image}
+                alt={selected.title}
+                fill
+                quality={100}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <div className="p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">
+              <p className="text-xs font-semibold uppercase tracking-wider text-cyan-800">
                 {selected.category}
               </p>
-              <h3 className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">
+              <h3 className="mt-2 text-2xl font-bold text-slate-950">
                 {selected.title}
               </h3>
-              <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-3 text-sm text-slate-700">
                 {selected.description}
               </p>
             </div>

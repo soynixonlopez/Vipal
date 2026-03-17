@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --muted: #475569;
+  --background: #f5f7fb; /* fondo principal muy claro, azulado */
+  --foreground: #111827; /* texto principal casi negro */
+  --muted: #6b7280; /* texto secundario gris neutro */
 }
 
 @theme inline {
@@ -12,14 +12,8 @@
   --font-sans: var(--font-inter);
 }
 
-html[data-theme="dark"] {
-  --background: #020617;
-  --foreground: #e2e8f0;
-  --muted: #94a3b8;
-}
-
 * {
-  @apply border-slate-200 dark:border-slate-800;
+  @apply border-slate-200;
 }
 
 body {

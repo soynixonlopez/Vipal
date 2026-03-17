@@ -3,14 +3,14 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { StatsSection } from "@/components/shared/StatsSection";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ServiceGrid } from "@/components/services/ServiceGrid";
-import { featuredServices } from "@/data/services";
+import { services } from "@/data/services";
 import { stats } from "@/data/company";
 import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
-import { ProcessSection } from "@/components/home/ProcessSection";
 import { GallerySection } from "@/components/home/GallerySection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/shared/CTASection";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 import { faqItems } from "@/data/faq";
 import { createMetadata } from "@/lib/seo";
 
@@ -34,12 +34,16 @@ export default function Home() {
           description="Trabajamos cada detalle para lograr resultados funcionales, elegantes y alineados a la arquitectura del espacio."
         />
         <div className="mt-10">
-          <ServiceGrid items={featuredServices} />
+          <ServiceGrid items={services.slice(0, 6)} />
+        </div>
+        <div className="mt-10 flex justify-center">
+          <ButtonLink href="/servicios" variant="secondary">
+            Ver todos los servicios
+          </ButtonLink>
         </div>
       </section>
 
       <WhyChooseUsSection />
-      <ProcessSection />
       <GallerySection />
       <TestimonialsSection />
 
@@ -51,19 +55,6 @@ export default function Home() {
         />
         <div className="mt-8">
           <FAQAccordion items={faqItems.slice(0, 4)} />
-        </div>
-      </section>
-
-      <section className="container-custom pb-20">
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 dark:border-slate-800 dark:bg-slate-900">
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-            Ubicacion y atencion comercial
-          </h3>
-          <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
-            Panama City. Atendemos consultas y coordinamos visitas tecnicas para
-            diagnostico, diseño y cotizacion.
-          </p>
-          <div className="mt-5 h-56 rounded-2xl bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-700" />
         </div>
       </section>
 
