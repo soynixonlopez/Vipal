@@ -1,0 +1,25 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="120" y="120" width="560" height="760" rx="24" fill="url(#glass1)" stroke="#67E8F9" stroke-opacity="0.4"/>
+  <rect x="520" y="210" width="680" height="640" rx="24" fill="url(#glass2)" stroke="#A5F3FC" stroke-opacity="0.3"/>
+  <rect x="900" y="80" width="580" height="820" rx="24" fill="url(#glass3)" stroke="#22D3EE" stroke-opacity="0.4"/>
+  <path d="M0 760C180 680 320 640 500 690C700 745 820 860 1010 860C1200 860 1350 760 1600 690V1000H0V760Z" fill="#0F172A" fill-opacity="0.55"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1225"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="glass1" x1="120" y1="120" x2="680" y2="880" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="glass2" x1="520" y1="210" x2="1200" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2E8F0" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="glass3" x1="900" y1="80" x2="1480" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+</svg>
