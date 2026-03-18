@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { Service } from "@/types";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
@@ -9,35 +8,47 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <div className="relative h-44 overflow-hidden">
-        <Image
-          src={service.image}
-          alt={service.name}
-          fill
-          quality={100}
-          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition duration-500 group-hover:scale-105"
-        />
-      </div>
+    <article className="group relative h-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-950 sm:h-[460px]">
+      <Image
+        src={service.image}
+        alt={service.name}
+        fill
+        quality={100}
+        sizes="(min-width: 1024px) 320px, (min-width: 640px) 48vw, 92vw"
+        className="object-cover object-center transition duration-700 group-hover:scale-[1.04]"
+      />
 
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-slate-950">
-          {service.name}
-        </h3>
-        <p className="mt-3 text-sm leading-relaxed text-slate-700">
-          {service.shortDescription}
-        </p>
-        <ul className="mt-4 space-y-2 text-sm text-slate-700">
-          {service.benefits.slice(0, 2).map((benefit) => (
-            <li key={benefit}>• {benefit}</li>
-          ))}
-        </ul>
-        <div className="mt-6 flex items-center justify-between">
-          <ButtonLink href={`/servicios/${service.slug}`} variant="secondary">
-            Ver detalle
-          </ButtonLink>
-          <ArrowRight className="h-5 w-5 text-cyan-700" />
+      {/* Overlay para legibilidad */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent" />
+
+      <div className="absolute inset-0 flex flex-col justify-end p-5">
+        {/* Detalle extra + CTA al hover */}
+        <div className="mb-4 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+          <div className="rounded-xl border border-white/10 bg-slate-950/45 backdrop-blur-sm p-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/80">
+              Lo que incluye
+            </p>
+            <ul className="mt-3 space-y-1 text-xs text-white/90">
+              {service.benefits.slice(0, 3).map((benefit) => (
+                <li key={benefit}>• {benefit}</li>
+              ))}
+            </ul>
+
+            <div className="mt-4">
+              <ButtonLink
+                href={`/servicios/${service.slug}`}
+                variant="primary"
+                className="w-full"
+              >
+                Ver detalles
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+          <p className="text-sm leading-relaxed text-white/90">{service.shortDescription}</p>
         </div>
       </div>
     </article>

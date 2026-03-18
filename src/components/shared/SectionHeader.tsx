@@ -14,14 +14,14 @@ export function SectionHeader({
   return (
     <header className={center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {badge && (
-        <p className="mb-3 inline-flex rounded-full border border-cyan-600/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-800">
+        <p className="mb-3 inline-flex rounded-full border border-cyan-600/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-800 dark:text-cyan-200">
           {badge}
         </p>
       )}
-      <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+      <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
         {title}
       </h2>
-      <p className="mt-4 text-base leading-relaxed text-slate-700">
+      <p className="mt-4 text-base leading-relaxed text-slate-700 dark:text-slate-300">
         {description}
       </p>
     </header>

@@ -17,7 +17,7 @@ export function CTASection({ title, description }: CtaSectionProps) {
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="/contacto"
-            className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-emerald-600/20 transition hover:bg-slate-100"
+            className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-emerald-600/20 transition hover:bg-slate-100 dark:bg-slate-900 dark:text-white"
           >
             Solicitar cotización ahora
           </a>

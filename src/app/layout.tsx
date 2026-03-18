@@ -31,7 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" data-theme="light" suppressHydrationWarning>
+    <html
+      lang="es"
+      data-theme="dark"
+      className="dark"
+      suppressHydrationWarning
+    >
       <body className={`${inter.variable} font-sans`}>
         <ThemeProvider>
           <Navbar />

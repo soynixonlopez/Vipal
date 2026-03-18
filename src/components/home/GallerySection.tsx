@@ -1,9 +1,42 @@
-import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { FeaturedProjectsCardsCarouselV2 } from "@/components/projects/FeaturedProjectsCardsCarouselV2";
 
 export function GallerySection() {
+  const getFileTitle = (imageSrc: string) => {
+    try {
+      const file = imageSrc.split("/").pop() ?? "";
+      const decoded = decodeURIComponent(file);
+      return decoded.replace(/\.[^/.]+$/, "");
+    } catch {
+      return undefined;
+    }
+  };
+
+  const getLocation = (imageSrc: string) => {
+    try {
+      const file = imageSrc.split("/").pop() ?? "";
+      const decoded = decodeURIComponent(file);
+      const name = decoded.replace(/\.[^/.]+$/, "");
+      if (!name.includes(",")) return undefined;
+      return name.split(",")[1]?.trim();
+    } catch {
+      return undefined;
+    }
+  };
+
+  const items = projects.slice(0, 5).map((project) => {
+    const location = getLocation(project.image);
+    const fileTitle = getFileTitle(project.image);
+    return {
+      src: project.image,
+      title: fileTitle ?? project.title,
+      description: location ?? project.category,
+      // Sin "ver detalles": solo mostrar ubicación.
+    };
+  });
+
   return (
     <section className="container-custom py-20">
       <SectionHeader
@@ -12,43 +45,11 @@ export function GallerySection() {
         description="Muestra referencial de trabajos ejecutados en soluciones de vidrio, aluminio y divisiones arquitectónicas."
       />
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.slice(0, 3).map((project) => (
-          <article
-            key={project.id}
-            className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
-          >
-            <div className="relative h-48">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
-                {project.category}
-              </p>
-              <h3 className="mt-2 text-lg font-semibold text-slate-900">
-                {project.title}
-              </h3>
-              <p className="mt-2 text-sm text-slate-600">
-                {project.description}
-              </p>
-            </div>
-          </article>
-        ))}
+      <div className="mt-10">
+        <FeaturedProjectsCardsCarouselV2 items={items} />
       </div>
 
-      <div className="mt-8">
-        <Link
-          href="/proyectos"
-          className="text-sm font-semibold text-emerald-700 hover:text-emerald-600"
-        >
-          Ver galería completa →
-        </Link>
-      </div>
+      {/* Quitado: enlace a la página completa de proyectos */}
     </section>
   );
 }

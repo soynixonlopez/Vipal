@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { createMetadata } from "@/lib/seo";
 import { CTASection } from "@/components/shared/CTASection";
 
@@ -13,15 +14,31 @@ export default function NosotrosPage() {
   return (
     <>
       <section className="container-custom py-16">
-        <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
-          Nosotros
-        </h1>
-        <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 dark:text-slate-300">
-          En Vipal S.A. desarrollamos soluciones arquitectonicas en vidrio y
-          aluminio con una vision clara: combinar precision tecnica, diseño
-          elegante y servicio profesional para crear espacios funcionales y de
-          alto impacto visual.
-        </p>
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+              Nosotros
+            </h1>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 dark:text-slate-300">
+              En Vipal S.A. desarrollamos soluciones arquitectonicas en vidrio y
+              aluminio con una vision clara: combinar precision tecnica, diseño
+              elegante y servicio profesional para crear espacios funcionales y de
+              alto impacto visual.
+            </p>
+          </div>
+
+          <div className="relative h-[240px] overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-950 sm:h-[320px]">
+            <Image
+              src="/assets/img/vipalservices.png"
+              alt="Vipal - Fingertips Solutions"
+              fill
+              quality={90}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+        </div>
       </section>
 
       <section className="container-custom grid gap-6 pb-20 md:grid-cols-2">
@@ -34,6 +51,7 @@ export default function NosotrosPage() {
             asegurando funcionalidad, estetica y seguridad en cada proyecto.
           </p>
         </article>
+
         <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
             Vision
@@ -48,7 +66,7 @@ export default function NosotrosPage() {
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
             Valores y enfoque profesional
           </h2>
-          <ul className="mt-4 grid gap-3 text-sm text-slate-600 sm:grid-cols-2 dark:text-slate-300">
+          <ul className="mt-4 grid gap-3 text-sm text-slate-600 dark:text-slate-300 sm:grid-cols-2">
             <li>• Calidad real en materiales, herrajes e instalacion.</li>
             <li>• Puntualidad y transparencia en cada etapa del servicio.</li>
             <li>• Atencion personalizada con asesoria tecnica clara.</li>

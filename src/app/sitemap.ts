@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vipalpty.com";
   const now = new Date();
 
-  const staticRoutes = ["", "/nosotros", "/servicios", "/proyectos", "/contacto", "/faq"];
+  const staticRoutes = ["", "/nosotros", "/servicios", "/contacto", "/faq"];
 
   const staticUrls = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,

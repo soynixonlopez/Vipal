@@ -13,10 +13,10 @@ export const metadata: Metadata = createMetadata({
 export default function ContactoPage() {
   return (
     <section className="container-custom py-16">
-      <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+      <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
         Cotizacion y contacto
       </h1>
-      <p className="mt-4 max-w-2xl text-base text-slate-600">
+      <p className="mt-4 max-w-2xl text-base text-slate-600 dark:text-slate-300">
         Cuentanos tu necesidad y recibe una propuesta profesional para tu
         proyecto de vidrio y aluminio.
       </p>
@@ -25,11 +25,11 @@ export default function ContactoPage() {
         <ContactForm />
 
         <aside className="space-y-5">
-          <article className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-xl font-semibold text-slate-900">
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
               Contacto directo
             </h2>
-            <ul className="mt-4 space-y-2 text-sm text-slate-600">
+            <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
               <li>Telefono / WhatsApp: {company.phone}</li>
               <li>Email: {company.email}</li>
               <li>Direccion: {company.location}</li>
@@ -44,15 +44,15 @@ export default function ContactoPage() {
             </a>
           </article>
 
-          <article className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-xl font-semibold text-slate-900">
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
               Ubicacion
             </h2>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
               Panama City. Coordinamos visitas tecnicas para levantamiento y
               asesoria.
             </p>
-            <div className="mt-4 h-44 rounded-xl bg-gradient-to-br from-slate-200 to-slate-300" />
+            <div className="mt-4 h-44 rounded-xl bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800" />
           </article>
         </aside>
       </div>

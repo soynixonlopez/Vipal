@@ -19,7 +19,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
         return (
           <article
             key={item.id}
-            className="rounded-2xl border border-slate-200 bg-white p-5"
+            className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900"
           >
             <button
               type="button"
@@ -27,18 +27,18 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
               onClick={() => setOpenId(isOpen ? null : item.id)}
               aria-expanded={isOpen}
             >
-              <h3 className="text-base font-semibold text-slate-900">
+              <h3 className="text-base font-semibold text-slate-900 dark:text-white">
                 {item.question}
               </h3>
               <ChevronDown
                 className={cn(
-                  "h-5 w-5 shrink-0 text-slate-500 transition",
+                  "h-5 w-5 shrink-0 text-slate-500 transition dark:text-slate-400",
                   isOpen && "rotate-180",
                 )}
               />
             </button>
             {isOpen && (
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                 {item.answer}
               </p>
             )}

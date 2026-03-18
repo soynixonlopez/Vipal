@@ -7,7 +7,7 @@ export const projects: Project[] = [
     category: "Fachadas",
     description:
       "Sistema de vidrio templado con perfilería de aluminio para imagen moderna y mayor luz natural.",
-    image: "/images/placeholders/project.svg",
+    image: "/assets/proyectos/Audio%20Concepts%20Panama%2C%20Obarrio.png",
     serviceSlug: "fachadas-vidrio-templado",
   },
   {
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     category: "Oficinas",
     description:
       "Diseño modular con vidrio y perfiles negros para áreas de reunión y operación.",
-    image: "/images/placeholders/project.svg",
+    image: "/assets/proyectos/Lumicentro, Mañanitas.png",
     serviceSlug: "divisiones-oficinas",
   },
   {
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     category: "Barandas",
     description:
       "Instalación de barandas en vidrio con anclaje de seguridad y acabado minimalista.",
-    image: "/images/placeholders/project.svg",
+    image: "/assets/proyectos/Oficinas%20PH%20Twis%2C%20Obarrio.png",
     serviceSlug: "barandas",
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     category: "Ventanas",
     description:
       "Proyecto de ventanas corredizas en múltiples niveles con enfoque en confort y durabilidad.",
-    image: "/images/placeholders/project.svg",
+    image: "/assets/proyectos/Lassa%20Caterpil%2C%20Pacora.png",
     serviceSlug: "ventanas-corredizas",
   },
   {
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     category: "Baños",
     description:
       "Puertas de baño en vidrio templado con herrajes premium para experiencia de alto estándar.",
-    image: "/images/placeholders/project.svg",
+    image: "/assets/proyectos/OficinasSortis.png",
     serviceSlug: "puertas-de-banos",
   },
   {

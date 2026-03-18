@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export function ProcessSection() {
   return (
-    <section className="bg-slate-100 py-20">
+    <section className="bg-slate-100 py-20 dark:bg-slate-950">
       <div className="container-custom">
         <SectionHeader
           badge="Proceso de trabajo"
@@ -14,15 +14,15 @@ export function ProcessSection() {
           {processSteps.map((step, index) => (
             <article
               key={step.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6"
+              className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"
             >
               <p className="text-sm font-semibold text-cyan-700">
                 Paso {index + 1}
               </p>
-              <h3 className="mt-2 text-xl font-semibold text-slate-950">
+              <h3 className="mt-2 text-xl font-semibold text-slate-950 dark:text-white">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">
+              <p className="mt-3 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                 {step.description}
               </p>
             </article>

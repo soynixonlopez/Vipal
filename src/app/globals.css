@@ -6,6 +6,13 @@
   --muted: #6b7280; /* texto secundario gris neutro */
 }
 
+html[data-theme="dark"] {
+  /* Paleta dark elegante (azul noche) */
+  --background: #071826; /* fondo principal */
+  --foreground: #e8eef6; /* texto principal */
+  --muted: #a7b4c7; /* texto secundario */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -13,7 +20,11 @@
 }
 
 * {
-  @apply border-slate-200;
+  border-color: rgb(226 232 240); /* border-slate-200 */
+}
+
+html.dark * {
+  border-color: rgb(18 52 78); /* borde azul noche */
 }
 
 body {
