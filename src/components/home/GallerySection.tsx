@@ -28,10 +28,9 @@ export function GallerySection() {
 
   const items = projects.slice(0, 5).map((project) => {
     const location = getLocation(project.image);
-    const fileTitle = getFileTitle(project.image);
     return {
       src: project.image,
-      title: fileTitle ?? project.title,
+      title: project.title,
       description: location ?? project.category,
       // Sin "ver detalles": solo mostrar ubicación.
     };

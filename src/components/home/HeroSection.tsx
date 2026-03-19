@@ -78,7 +78,7 @@ export function HeroSection() {
 
       <div className="relative container-custom flex min-h-screen items-center justify-center py-16 text-center lg:py-24">
         <div className="max-w-3xl sm:max-w-4xl">
-          <p className="inline-flex rounded-full border border-emerald-400/40 bg-emerald-500/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+          <p className="inline-flex rounded-full border border-[#74b6cb]/40 bg-[#0a5f80]/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#9cd2e4]">
             Vidrio y aluminio para proyectos exigentes
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-white leading-tight sm:text-5xl lg:text-6xl">
@@ -100,8 +100,17 @@ export function HeroSection() {
               href={`https://wa.me/${company.whatsapp}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-w-[240px] h-14 items-center justify-center rounded-xl border border-slate-100/70 px-8 text-base font-semibold text-slate-50 transition hover:border-emerald-400 hover:text-emerald-200"
+              className="inline-flex min-w-[240px] h-14 items-center justify-center gap-2 rounded-xl border border-slate-100/70 px-8 text-base font-semibold text-slate-50 transition hover:border-[#74b6cb] hover:text-[#c3e7f2]"
             >
+              <svg
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                className="h-5 w-5"
+                fill="currentColor"
+              >
+                <path d="M19.11 17.53c-.27-.13-1.58-.78-1.83-.87-.24-.09-.42-.13-.6.14-.18.27-.69.87-.84 1.05-.16.18-.31.2-.58.07-.27-.13-1.14-.42-2.18-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.41.12-.54.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.13-.6-1.45-.82-1.99-.22-.53-.44-.46-.6-.47h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22 0 1.31.95 2.57 1.08 2.75.13.18 1.87 2.86 4.53 4.01.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.24-.18-.51-.31Z" />
+                <path d="M16.01 3.2c-7.04 0-12.77 5.73-12.77 12.77 0 2.25.59 4.46 1.71 6.4L3 28.8l6.57-1.72a12.7 12.7 0 0 0 6.43 1.74h.01c7.04 0 12.77-5.73 12.77-12.77S23.05 3.2 16.01 3.2Zm0 23.47h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-3.9 1.02 1.04-3.8-.25-.39a10.62 10.62 0 0 1-1.63-5.72c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.51 1.11 7.52 3.12 2.01 2.01 3.12 4.68 3.12 7.52 0 5.86-4.77 10.63-10.63 10.63Z" />
+              </svg>
               Hablar por WhatsApp
             </a>
           </div>

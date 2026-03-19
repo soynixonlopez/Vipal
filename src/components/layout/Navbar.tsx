@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { company, navLinks } from "@/data/company";
+import { navLinks } from "@/data/company";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,16 +13,18 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl dark:border-[#12324c]/70 dark:bg-[#071826]/60">
       <div className="container-custom flex h-20 items-center justify-between">
-        <Link href="/" className="group">
-          <p className="text-xl font-bold text-slate-900 dark:text-white">
-            {company.name}
-          </p>
-          <p className="text-xs uppercase tracking-widest text-emerald-700">
-            {company.slogan}
-          </p>
+        <Link href="/" className="group shrink-0">
+          <Image
+            src="/assets/logo/vipallogo.png"
+            alt="Vipal Glass"
+            width={999}
+            height={278}
+            priority
+            className="h-12 w-auto max-w-[62vw] object-contain md:h-14 md:max-w-[36vw]"
+          />
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-4 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -35,12 +37,10 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <ThemeToggle />
           <ButtonLink href="/contacto">Solicitar cotización</ButtonLink>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}

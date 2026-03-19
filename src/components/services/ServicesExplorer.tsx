@@ -44,8 +44,8 @@ export function ServicesExplorer({ items }: ServicesExplorerProps) {
               onClick={() => setCategory(cat)}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                 category === cat
-                  ? "border-emerald-600 bg-emerald-600 text-white"
-                  : "border-slate-300 bg-white text-slate-700 hover:border-emerald-500 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200"
+                  ? "border-[#0a5f80] bg-[#0a5f80] text-white"
+                  : "border-slate-300 bg-white text-slate-700 hover:border-[#0a5f80] dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200"
               }`}
             >
               {cat === "todas"
@@ -60,7 +60,7 @@ export function ServicesExplorer({ items }: ServicesExplorerProps) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Buscar servicio..."
-            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm outline-none transition focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100"
+            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm outline-none transition focus:border-[#0a5f80] dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100"
           />
         </div>
       </div>

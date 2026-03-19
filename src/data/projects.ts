@@ -30,7 +30,7 @@ export const projects: Project[] = [
   },
   {
     id: "p4",
-    title: "Ventanería de torre habitacional",
+    title: "Iassa Caterpila",
     category: "Ventanas",
     description:
       "Proyecto de ventanas corredizas en múltiples niveles con enfoque en confort y durabilidad.",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     id: "p5",
-    title: "Renovación de baños en hotel",
+    title: "Oficinas Sortis",
     category: "Baños",
     description:
       "Puertas de baño en vidrio templado con herrajes premium para experiencia de alto estándar.",

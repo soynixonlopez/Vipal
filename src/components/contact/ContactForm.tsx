@@ -38,7 +38,7 @@ export function ContactForm({ defaultServiceName }: ContactFormProps) {
           <input
             type="text"
             required
-            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-[#0a5f80] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             placeholder="Ej. Juan Pérez"
           />
         </label>
@@ -47,7 +47,7 @@ export function ContactForm({ defaultServiceName }: ContactFormProps) {
           <input
             type="tel"
             required
-            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-[#0a5f80] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             placeholder="Ej. 6834-3037"
           />
         </label>
@@ -56,7 +56,7 @@ export function ContactForm({ defaultServiceName }: ContactFormProps) {
           <input
             type="email"
             required
-            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-[#0a5f80] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             placeholder="Ej. cliente@email.com"
           />
         </label>
@@ -66,7 +66,7 @@ export function ContactForm({ defaultServiceName }: ContactFormProps) {
             required
             value={serviceInterest}
             onChange={(event) => setServiceInterest(event.target.value)}
-            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-[#0a5f80] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
           >
             <option value="" disabled>
               Selecciona un servicio
@@ -83,7 +83,7 @@ export function ContactForm({ defaultServiceName }: ContactFormProps) {
           <textarea
             required
             rows={5}
-            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-emerald-500 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-[#0a5f80] dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
             placeholder="Cuéntanos sobre tu proyecto y objetivos."
           />
         </label>
@@ -91,13 +91,13 @@ export function ContactForm({ defaultServiceName }: ContactFormProps) {
 
       <button
         type="submit"
-        className="mt-5 inline-flex rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-500"
+        className="mt-5 inline-flex rounded-xl bg-[#0a5f80] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#084c66]"
       >
         Enviar solicitud
       </button>
 
       {sent && (
-        <p className="mt-4 text-sm text-emerald-600 dark:text-emerald-400">
+        <p className="mt-4 text-sm text-[#0a5f80] dark:text-[#9cd2e4]">
           Gracias. Tu solicitud fue registrada; este formulario está listo para
           conectarse a tu backend o email service.
         </p>

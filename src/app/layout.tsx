@@ -16,12 +16,32 @@ export const metadata: Metadata = {
   title: "Vipal S.A. | Fingertips Solutions",
   description:
     "Soluciones profesionales en vidrio y aluminio en Panama City: ventanas corredizas, fachadas, puertas, divisiones de oficina, barandas y espejos decorativos.",
+  icons: {
+    icon: "/assets/logo/vipallogo.png",
+    shortcut: "/assets/logo/vipallogo.png",
+    apple: "/assets/logo/vipallogo.png",
+  },
   openGraph: {
     title: "Vipal S.A. | Fingertips Solutions",
     description:
       "Instalaciones premium en vidrio y aluminio para proyectos residenciales y corporativos.",
     type: "website",
     locale: "es_PA",
+    images: [
+      {
+        url: "/assets/logo/vipallogo.png",
+        width: 1024,
+        height: 682,
+        alt: "Vipal Glass - Fingertips Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vipal S.A. | Fingertips Solutions",
+    description:
+      "Instalaciones premium en vidrio y aluminio para proyectos residenciales y corporativos.",
+    images: ["/assets/logo/vipallogo.png"],
   },
 };
 
