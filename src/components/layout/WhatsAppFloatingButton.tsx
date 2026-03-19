@@ -43,7 +43,7 @@ export function WhatsAppFloatingButton() {
         <button
           type="button"
           onClick={handleScrollTop}
-          className="fixed bottom-5 left-5 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg shadow-slate-900/30 transition hover:scale-105 hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200"
+          className="fixed bottom-5 left-5 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#12324c] bg-[#0a2035] text-slate-100 shadow-lg shadow-black/30 transition hover:scale-105 hover:bg-[#12324c]"
           aria-label="Volver arriba"
         >
           <ArrowUp className="h-5 w-5" />

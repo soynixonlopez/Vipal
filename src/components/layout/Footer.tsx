@@ -11,7 +11,7 @@ export function Footer() {
   const [openLegal, setOpenLegal] = useState(false);
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-100 py-14 dark:border-[#12324c] dark:bg-[#071826]">
+    <footer className="border-t border-[#12324c] bg-[#071826] py-14">
       <div className="container-custom grid gap-10 md:grid-cols-4">
         <div>
           <Image
@@ -21,14 +21,14 @@ export function Footer() {
             height={278}
             className="h-14 w-auto max-w-full object-contain md:h-16"
           />
-          <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">
+          <p className="mt-4 text-sm text-slate-300">
             Soluciones premium en vidrio y aluminio para proyectos residenciales y
             corporativos en {company.location}.
           </p>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900 dark:text-white">
+          <h4 className="text-sm font-semibold uppercase tracking-wide text-white">
             Navegación
           </h4>
           <ul className="mt-4 space-y-2 text-sm">
@@ -36,7 +36,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-slate-600 transition hover:text-emerald-700 dark:text-slate-300 dark:hover:text-emerald-300"
+                  className="text-slate-300 transition hover:text-emerald-300"
                 >
                   {link.label}
                 </Link>
@@ -46,10 +46,10 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900 dark:text-white">
+          <h4 className="text-sm font-semibold uppercase tracking-wide text-white">
             Servicios
           </h4>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="mt-4 space-y-2 text-sm text-slate-300">
             <li>Ventanas corredizas</li>
             <li>Fachadas de vidrio</li>
             <li>Puertas de vidrio templado</li>
@@ -60,10 +60,10 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-900 dark:text-white">
+          <h4 className="text-sm font-semibold uppercase tracking-wide text-white">
             Contacto directo
           </h4>
-          <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="mt-4 space-y-2 text-sm text-slate-300">
             <li>Tel/WhatsApp: {company.phone}</li>
             <li>Email: {company.email}</li>
             <li>Ubicación: {company.location}</li>
@@ -88,7 +88,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container-custom mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between dark:border-[#12324c] dark:text-slate-400">
+      <div className="container-custom mt-10 flex flex-col gap-3 border-t border-[#12324c] pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
         <p>
           © {new Date().getFullYear()} {company.name}. Todos los derechos
           reservados.
@@ -97,14 +97,14 @@ export function Footer() {
           <button
             type="button"
             onClick={() => setOpenPrivacy(true)}
-            className="text-xs font-medium text-slate-600 underline underline-offset-4 hover:text-emerald-700 dark:text-slate-300 dark:hover:text-emerald-300"
+            className="text-xs font-medium text-slate-300 underline underline-offset-4 hover:text-emerald-300"
           >
             Política de privacidad
           </button>
           <button
             type="button"
             onClick={() => setOpenLegal(true)}
-            className="text-xs font-medium text-slate-600 underline underline-offset-4 hover:text-emerald-700 dark:text-slate-300 dark:hover:text-emerald-300"
+            className="text-xs font-medium text-slate-300 underline underline-offset-4 hover:text-emerald-300"
           >
             Aviso legal
           </button>

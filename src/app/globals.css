@@ -1,13 +1,9 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f5f7fb; /* fondo principal muy claro, azulado */
-  --foreground: #111827; /* texto principal casi negro */
-  --muted: #6b7280; /* texto secundario gris neutro */
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-html[data-theme="dark"] {
-  /* Paleta dark elegante (azul noche) */
+:root {
+  /* Paleta dark elegida como base global del sitio */
   --background: #071826; /* fondo principal */
   --foreground: #e8eef6; /* texto principal */
   --muted: #a7b4c7; /* texto secundario */
@@ -20,7 +16,7 @@ html[data-theme="dark"] {
 }
 
 * {
-  border-color: rgb(226 232 240); /* border-slate-200 */
+  border-color: rgb(18 52 78); /* borde azul noche */
 }
 
 html.dark * {
@@ -29,6 +25,11 @@ html.dark * {
 
 body {
   @apply bg-background text-foreground antialiased;
+}
+
+html,
+body {
+  color-scheme: dark;
 }
 
 .container-custom {
