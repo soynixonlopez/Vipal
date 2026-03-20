@@ -63,7 +63,15 @@ export default function ContactoPage() {
                 Panama City. Coordinamos visitas tecnicas para levantamiento y
                 asesoria.
               </p>
-              <div className="mt-4 h-44 rounded-xl bg-linear-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800" />
+              <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
+                <iframe
+                  title="Mapa de Panama City"
+                  src="https://www.google.com/maps?q=Panama%20City%2C%20Panama&z=12&output=embed"
+                  className="h-52 w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </article>
           </aside>
         </div>
