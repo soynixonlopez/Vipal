@@ -31,7 +31,12 @@ export function GallerySection() {
     return {
       src: project.image,
       title: project.title,
-      description: location ?? project.category,
+      description:
+        project.id === "p3"
+          ? "Ph Twis Obarrio"
+          : project.id === "p2"
+            ? "mañanitas"
+            : location ?? project.category,
       // Sin "ver detalles": solo mostrar ubicación.
     };
   });

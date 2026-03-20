@@ -3,7 +3,7 @@ import { Project } from "@/types";
 export const projects: Project[] = [
   {
     id: "p1",
-    title: "Fachada corporativa en Obarrio",
+    title: "Audioconcepts",
     category: "Fachadas",
     description:
       "Sistema de vidrio templado con perfilería de aluminio para imagen moderna y mayor luz natural.",
@@ -12,7 +12,7 @@ export const projects: Project[] = [
   },
   {
     id: "p2",
-    title: "Divisiones ejecutivas para oficina",
+    title: "Puertas abatibles en vidrio templado",
     category: "Oficinas",
     description:
       "Diseño modular con vidrio y perfiles negros para áreas de reunión y operación.",
@@ -21,12 +21,12 @@ export const projects: Project[] = [
   },
   {
     id: "p3",
-    title: "Barandas de balcón residencial",
-    category: "Barandas",
+    title: "Divisiones de oficinas en aluminio y vidrios",
+    category: "Oficinas",
     description:
-      "Instalación de barandas en vidrio con anclaje de seguridad y acabado minimalista.",
+      "Divisiones de oficina en aluminio y vidrio con acabado limpio y funcional.",
     image: "/assets/proyectos/Oficinas%20PH%20Twis%2C%20Obarrio.png",
-    serviceSlug: "barandas",
+    serviceSlug: "divisiones-oficinas",
   },
   {
     id: "p4",
