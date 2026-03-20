@@ -3,6 +3,7 @@ import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { faqItems } from "@/data/faq";
 import { createMetadata } from "@/lib/seo";
+import { MotionSection } from "@/components/shared/MotionSection";
 
 export const metadata: Metadata = createMetadata({
   title: "Preguntas Frecuentes | Vipal S.A.",
@@ -13,15 +14,17 @@ export const metadata: Metadata = createMetadata({
 
 export default function FaqPage() {
   return (
-    <section className="container-custom py-16">
-      <SectionHeader
-        badge="FAQ"
-        title="Preguntas frecuentes sobre nuestros servicios"
-        description="Respuestas claras sobre cotizaciones, procesos de instalacion y atencion personalizada."
-      />
-      <div className="mt-10 max-w-4xl">
-        <FAQAccordion items={faqItems} />
-      </div>
-    </section>
+    <MotionSection>
+      <section className="container-custom py-16">
+        <SectionHeader
+          badge="FAQ"
+          title="Preguntas frecuentes sobre nuestros servicios"
+          description="Respuestas claras sobre cotizaciones, procesos de instalacion y atencion personalizada."
+        />
+        <div className="mt-10 max-w-4xl">
+          <FAQAccordion items={faqItems} />
+        </div>
+      </section>
+    </MotionSection>
   );
 }

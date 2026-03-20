@@ -164,7 +164,8 @@ export const services: Service[] = [
       "Materiales adecuados para interior y exterior.",
       "Instalación con criterios de seguridad.",
     ],
-    image: "/assets/barandas/barandas.png",
+    image:
+      "/assets/barandas/Foto%20de%20Nixon%20L%C3%B3pez%20_%20Web%20para%20negocios.jpg",
     gallery: [
       "/assets/barandas/barandas.png",
       "/assets/barandas/Foto%20de%20Nixon%20L%C3%B3pez%20_%20Web%20para%20negocios(1).jpg",

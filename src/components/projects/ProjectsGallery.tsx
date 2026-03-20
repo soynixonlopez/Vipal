@@ -34,7 +34,7 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
               "rounded-full border px-4 py-2 text-sm font-medium transition",
               activeCategory === category
                 ? "border-cyan-600 bg-cyan-600 text-white"
-                : "border-slate-300 bg-white text-slate-700 hover:border-cyan-600 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200",
+                : "border-slate-300 bg-white text-slate-700 hover:-translate-y-0.5 hover:border-cyan-600 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200",
             )}
             onClick={() => setActiveCategory(category)}
           >
@@ -48,7 +48,7 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
           <button
             type="button"
             key={project.id}
-            className="group overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+            className="interactive-card group overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm dark:border-slate-800 dark:bg-slate-900"
             onClick={() => setSelected(project)}
           >
             <div className="relative h-48">

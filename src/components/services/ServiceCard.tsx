@@ -8,7 +8,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <article className="group relative h-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-950 sm:h-[460px]">
+    <article className="interactive-card group relative h-[420px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-950 sm:h-[460px]">
       <Image
         src={service.image}
         alt={service.name}
@@ -19,7 +19,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
       />
 
       {/* Overlay para legibilidad */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/35 to-transparent" />
 
       <div className="absolute inset-0 flex flex-col justify-end p-5">
         {/* Detalle extra + CTA al hover */}

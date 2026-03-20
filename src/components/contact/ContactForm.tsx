@@ -61,7 +61,7 @@ export function ContactForm({ defaultServiceName }: ContactFormProps) {
 
   return (
     <form
-      className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+      className="interactive-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
       onSubmit={handleSubmit}
     >
       <h2 className="text-2xl font-bold text-slate-900 dark:text-white">

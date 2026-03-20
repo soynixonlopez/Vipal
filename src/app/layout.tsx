@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
@@ -63,6 +64,7 @@ export default function RootLayout({
           <main className="fade-in min-h-screen">{children}</main>
           <Footer />
           <WhatsAppFloatingButton />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

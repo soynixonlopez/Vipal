@@ -19,7 +19,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
         return (
           <article
             key={item.id}
-            className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900"
+            className="interactive-card rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900"
           >
             <button
               type="button"

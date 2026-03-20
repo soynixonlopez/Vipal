@@ -9,7 +9,7 @@ export function StatsSection({ items }: StatsSectionProps) {
         {items.map((item) => (
           <article
             key={item.label}
-            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-[#12324c] dark:bg-[#0a2035]"
+            className="interactive-card rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-[#12324c] dark:bg-[#0a2035]"
           >
             <p className="text-3xl font-bold text-slate-900 dark:text-white">
               {item.value}

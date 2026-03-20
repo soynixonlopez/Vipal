@@ -4,6 +4,7 @@ import { createMetadata } from "@/lib/seo";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ProjectsGallery } from "@/components/projects/ProjectsGallery";
 import { CTASection } from "@/components/shared/CTASection";
+import { MotionSection } from "@/components/shared/MotionSection";
 
 export const metadata: Metadata = createMetadata({
   title: "Proyectos | Vipal S.A.",
@@ -15,21 +16,25 @@ export const metadata: Metadata = createMetadata({
 export default function ProyectosPage() {
   return (
     <>
-      <section className="container-custom py-16">
-        <SectionHeader
-          badge="Galeria premium"
-          title="Proyectos que demuestran calidad, precision y diseño."
-          description="Explora trabajos referenciales clasificados por categoria y visualiza como aplicamos nuestras soluciones en distintos contextos."
-        />
-        <div className="mt-10">
-          <ProjectsGallery items={projects} />
-        </div>
-      </section>
+      <MotionSection>
+        <section className="container-custom py-16">
+          <SectionHeader
+            badge="Galeria premium"
+            title="Proyectos que demuestran calidad, precision y diseño."
+            description="Explora trabajos referenciales clasificados por categoria y visualiza como aplicamos nuestras soluciones en distintos contextos."
+          />
+          <div className="mt-10">
+            <ProjectsGallery items={projects} />
+          </div>
+        </section>
+      </MotionSection>
 
-      <CTASection
-        title="Tu proyecto puede ser el proximo caso de exito."
-        description="Hablemos de tu idea y definamos juntos una ejecucion de alto nivel."
-      />
+      <MotionSection delayMs={120}>
+        <CTASection
+          title="Tu proyecto puede ser el proximo caso de exito."
+          description="Hablemos de tu idea y definamos juntos una ejecucion de alto nivel."
+        />
+      </MotionSection>
     </>
   );
 }
