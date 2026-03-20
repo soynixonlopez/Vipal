@@ -54,7 +54,10 @@ export function HeroSection() {
   }, [parallax]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative min-h-[calc(100svh-5rem)] overflow-hidden"
+    >
       <div
         className="absolute inset-0 will-change-transform"
         style={{ transform: bgTransform }}
@@ -76,7 +79,7 @@ export function HeroSection() {
         style={{ opacity: overlayOpacity }}
       />
 
-      <div className="relative container-custom flex min-h-screen items-center justify-center py-16 text-center lg:py-24">
+      <div className="relative container-custom flex min-h-[calc(100svh-5rem)] items-center justify-center py-10 text-center lg:py-20">
         <div className="max-w-3xl sm:max-w-4xl">
           <p className="inline-flex rounded-full border border-[#74b6cb]/40 bg-[#0a5f80]/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#9cd2e4]">
             Vidrio y aluminio para proyectos exigentes

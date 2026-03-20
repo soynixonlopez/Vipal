@@ -5,7 +5,7 @@ export const company: CompanyInfo = {
   slogan: "Fingertips Solutions",
   phone: "6834-3037",
   whatsapp: "50768343037",
-  email: "vipalpty@gmail.com",
+  email: "info@vipalglasspanama.com",
   location: "Panama City",
 };
 
