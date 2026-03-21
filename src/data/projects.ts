@@ -39,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     id: "p5",
-    title: "Oficinas Sortis",
+    title: "Divisiones de espacios en vidrio templad",
     category: "Baños",
     description:
       "Puertas de baño en vidrio templado con herrajes premium para experiencia de alto estándar.",

@@ -35,7 +35,9 @@ export function GallerySection() {
         project.id === "p3"
           ? "Ph Twis Obarrio"
           : project.id === "p2"
-            ? "mañanitas"
+            ? "Mañanitas"
+            : project.id === "p5"
+              ? "Hotel Sortis, Obarrio"
             : location ?? project.category,
       // Sin "ver detalles": solo mostrar ubicación.
     };

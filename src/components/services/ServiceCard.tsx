@@ -15,7 +15,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         fill
         quality={100}
         sizes="(min-width: 1024px) 320px, (min-width: 640px) 48vw, 92vw"
-        className="object-cover object-center transition duration-700 group-hover:scale-[1.04]"
+        className="media-hover object-cover object-center"
       />
 
       {/* Overlay para legibilidad */}

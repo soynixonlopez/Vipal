@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { X } from "lucide-react";
 import { Project } from "@/types";
 import { cn } from "@/lib/utils";
@@ -17,11 +17,18 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
   );
   const [activeCategory, setActiveCategory] = useState("Todos");
   const [selected, setSelected] = useState<Project | null>(null);
+  const [animateIn, setAnimateIn] = useState(false);
 
   const filtered =
     activeCategory === "Todos"
       ? items
       : items.filter((item) => item.category === activeCategory);
+
+  useEffect(() => {
+    setAnimateIn(false);
+    const id = window.requestAnimationFrame(() => setAnimateIn(true));
+    return () => window.cancelAnimationFrame(id);
+  }, [activeCategory]);
 
   return (
     <>
@@ -44,11 +51,14 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((project) => (
+        {filtered.map((project, index) => (
           <button
             type="button"
             key={project.id}
-            className="interactive-card group overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            className={`interactive-card reveal-on-scroll group overflow-hidden rounded-2xl border border-slate-200 bg-white text-left shadow-sm dark:border-slate-800 dark:bg-slate-900 ${
+              animateIn ? "is-visible" : ""
+            }`}
+            style={{ transitionDelay: `${index * 70}ms` }}
             onClick={() => setSelected(project)}
           >
             <div className="relative h-48">
@@ -58,7 +68,7 @@ export function ProjectsGallery({ items }: ProjectsGalleryProps) {
                 fill
                 quality={100}
                 sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition duration-500 group-hover:scale-105"
+                className="media-hover object-cover"
               />
             </div>
             <div className="p-5">

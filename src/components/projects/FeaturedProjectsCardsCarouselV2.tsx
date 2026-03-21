@@ -161,7 +161,7 @@ export function FeaturedProjectsCardsCarouselV2({
                   window.setTimeout(() => setPaused(false), slideMs);
                 }}
                 aria-label={`Proyecto: ${item.title}`}
-                className="relative h-[260px] w-[260px] sm:h-[290px] sm:w-[280px] md:h-[320px] md:w-[320px] flex-none overflow-hidden rounded-2xl border border-slate-200 bg-transparent dark:border-[#12324c] dark:bg-transparent"
+                className="group relative h-[260px] w-[260px] sm:h-[290px] sm:w-[280px] md:h-[320px] md:w-[320px] flex-none overflow-hidden rounded-2xl border border-slate-200 bg-transparent dark:border-[#12324c] dark:bg-transparent"
               >
                 <div className="relative h-full w-full">
                   <Image
@@ -170,12 +170,12 @@ export function FeaturedProjectsCardsCarouselV2({
                     fill
                     quality={75}
                     sizes="(min-width: 1024px) 320px, (min-width: 768px) 280px, 260px"
-                    className="object-cover object-center"
+                    className="media-hover object-cover object-center"
                     priority={i === 1}
                   />
                 </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
 
                 <div className="absolute inset-x-0 bottom-0 p-4">
                   <p className="text-xs font-semibold uppercase tracking-wider text-white/90">
